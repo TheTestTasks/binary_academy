@@ -3,7 +3,7 @@
 
 
 | Описание функции | Метод запроса | Пример запроса |
-|:-|:-|:-|
+|:-----|:-----:|:-----|
 | Получить список стран | GET | GET /restapi/countries HTTP 1.1 |
 | | | Host: my.site.com |
 | | | User-Agent: Internet-Explorer 9.0 |
