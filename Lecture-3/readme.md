@@ -67,7 +67,7 @@
 3) Студенту с именем Vinnie Auerbach добавить поле “accepted” со значением true.
 ```
 > db.students.update({name: "Vinnie Auerbach"}, {$set: {accepted: true}})
-WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 0 })
+WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
 
 > db.students.findOne({name: "Vinnie Auerbach"})
 {
