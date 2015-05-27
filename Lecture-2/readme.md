@@ -6,22 +6,22 @@
   ┌─────────────────────────┬──────────────┬───────────────────────────────────────────┐
   │Описание функции         │Метод запроса │Пример запроса                             │
   ├─────────────────────────┼──────────────┼───────────────────────────────────────────┤
-  │                         │              │GET /restapi/countries HTTP 1.1            │
+  │                         │              │GET /restapi/countries HTTP/1.1            │
   │Получить список стран    │     GET      │Host: my.site.com                          │
   │                         │              │User-Agent: Internet-Explorer 9.0          │
   ├─────────────────────────┼──────────────┼───────────────────────────────────────────┤
-  │Получить список отелей в │              │GET /restapi/hotels/{country} HTTP 1.1     │
+  │Получить список отелей в │              │GET /restapi/hotels/{country} HTTP/1.1     │
   │стране                   │     GET      │Host: my.site.com                          │
   │                         │              │User-Agent: Internet-Explorer 9.0          │
   ├─────────────────────────┼──────────────┼───────────────────────────────────────────┤
-  │                         │              │POST /restapi/country HTTP 1.1             │
+  │                         │              │POST /restapi/country HTTP/1.1             │
   │                         │              │Host: my.site.com                          │
   │Добавить страну          │     POST     │User-Agent: Internet-Explorer 9.0          │
   │                         │              │                                           │
   │                         │              │Name={name}                                │
   │                         │              │&Description={description}                 │
   ├─────────────────────────┼──────────────┼───────────────────────────────────────────┤
-  │                         │              │POST /restapi/hotel HTTP 1.1               │
+  │                         │              │POST /restapi/hotel HTTP/1.1               │
   │                         │              │Host: my.site.com                          │
   │                         │              │User-Agent: Internet-Explorer 9.0          │
   │Добавить отель в страну  │     POST     │                                           │
@@ -29,15 +29,15 @@
   │                         │              │&Name={name}                               │
   │                         │              │&Description={description}                 │
   ├─────────────────────────┼──────────────┼───────────────────────────────────────────┤
-  │Удалить определенный     │              │DELETE /restapi/hotel/{id} HTTP 1.1        │
+  │Удалить определенный     │              │DELETE /restapi/hotel/{id} HTTP/1.1        │
   │отель                    │    DELETE    │Host: my.site.com                          │
   │                         │              │User-Agent: Internet-Explorer 9.0          │
   ├─────────────────────────┼──────────────┼───────────────────────────────────────────┤
-  │Получить информацию об   │              │GET /restapi/hotel/{id} HTTP 1.1           │
+  │Получить информацию об   │              │GET /restapi/hotel/{id} HTTP/1.1           │
   │определенном отеле       │     GET      │Host: my.site.com                          │
   │                         │              │User-Agent: Internet-Explorer 9.0          │
   ├─────────────────────────┼──────────────┼───────────────────────────────────────────┤
-  │                         │              │PUT /restapi/hotel/{id} HTTP 1.1           │
+  │                         │              │PUT /restapi/hotel/{id} HTTP/1.1           │
   │                         │              │Host: my.site.com                          │
   │Обновить информацию об   │              │User-Agent: Internet-Explorer 9.0          │
   │определенном отеле       │     PUT      │                                           │
