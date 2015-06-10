@@ -4,15 +4,13 @@ $(function() {
     $(document).on('keypress', function(e) {        
         var $target = $(e.target);
 
-        if (!$target.hasClass('edit-goods') && !$target.hasClass('new-goods')) return;
-
         var title = $.trim($target.val());
         if (e.keyCode != 13 || title == '') return;
 
         if ($target.hasClass('edit-goods')) {
             $target.parent().find('.view-goods label').text(title);
             closeEditBox();
-        } else {
+        } else if ($target.hasClass('new-goods')) {
             var tpl = $('#goods-item-tpl').html();
             title = $('<div />').text(title).html(); // escape title jQuery way :)
             tpl = tpl.replace(/\{\{title\}\}/g, title);
@@ -24,12 +22,10 @@ $(function() {
         if (e.keyCode != 27) return;
 
         var $target = $(e.target);
-        if (!$target.hasClass('edit-goods') && !$target.hasClass('new-goods')) return;
-
         if ($target.hasClass('edit-goods')) {
             $target.val( $target.parent().find('.view-goods label').text() );
             closeEditBox();
-        } else {
+        } else if ($target.hasClass('new-goods')) {
             $target.val('');
         }
     });
