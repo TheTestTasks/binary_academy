@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Goods</title>    
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="goods.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Goods</h1>
+            <input class="form-control input-lg new-goods" placeholder="New goods..." autofocus>
+        </div>
+        <ul class="goods-list"></ul>
+        <div class="footer">
+            <div class="pull-left">
+                <label><input class="mark-goods mark-all" type="checkbox"> Mark all</label>
+            </div>
+            <div class="pull-right">
+                <button class="btn btn-default btn-xs delete-all-goods" disabled>Delete marked</button>
+            </div>
+        </div>
+    </div>
+    
+    <template id="goods-item-tpl">
+        <li>
+            <div class="view-goods">
+                <input class="mark-goods mark-single" type="checkbox">
+                <label>{{title}}</label>
+                <button class="delete-goods">&times;</button>
+            </div>
+            <input class="edit-goods form-control input-lg" value="{{title}}">
+        </li>
+    </template>
+
+    <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="goods.js"></script>
+</body>
+</html>
