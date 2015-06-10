@@ -47,7 +47,7 @@ $(function() {
         $('input.new-goods').focus();
     });
 
-    // Show exit goods box (double click handler)
+    // Show edit goods box (double click handler)
     $(document).on('dblclick', '.view-goods label', function() {
         $(this).parent().hide();
         $(this).parent().parent().find('.edit-goods').show().focus();
