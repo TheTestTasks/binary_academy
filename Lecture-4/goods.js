@@ -10,7 +10,7 @@ $(function() {
         if (e.keyCode != 13 || title == '') return;
 
         if ($target.hasClass('edit-goods')) {
-            $target.parent().find('.view-goods label').text($target.val());
+            $target.parent().find('.view-goods label').text(title);
             closeEditBox();
         } else {
             var tpl = $('#goods-item-tpl').html();
