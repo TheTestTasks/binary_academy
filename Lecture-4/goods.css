@@ -45,8 +45,7 @@ body{
 }
 
 .view-goods label{
-    white-space: pre;
-    word-break: break-word;
+    word-break: break-all;
     width: 520px;
     margin-left: 20px;
 }
