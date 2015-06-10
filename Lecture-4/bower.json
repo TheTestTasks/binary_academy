@@ -4,7 +4,7 @@
   "authors": [
     "brevis <brevis.ua@gmail.com>"
   ],
-  "main": "index.html",
+  "main": "goods.html",
   "license": "MIT",
   "ignore": [
     "**/.*",
