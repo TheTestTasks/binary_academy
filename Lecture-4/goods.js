@@ -70,8 +70,7 @@ $(function() {
     // Helpers
     function closeEditBox() {
         $('.goods-list li .edit-goods').hide();
-        $('.goods-list li .view-goods').show();
-        $('input.new-goods').focus();
+        $('.goods-list li .view-goods').show();        
     }
 
     function markGoods($el, checked) {
