@@ -74,7 +74,11 @@ $(function() {
     }
 
     function markGoods($el, checked) {
-        $el.parent().parent().toggleClass('marked');
+        if (checked) {
+            $el.parent().parent().addClass('marked');
+        } else {
+            $el.parent().parent().removeClass('marked');
+        }
         $el.prop('checked', checked);
     }
 
