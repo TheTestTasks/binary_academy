@@ -76,6 +76,7 @@ header h1{
     display: table;
     position: relative;
     overflow: hidden;
+    filter: opacity(1); /* firefox overflow hack */
 }
 
 .container section article .block.ribbon:before,
@@ -86,13 +87,14 @@ header h1{
     width: 80%;
     height: 50%;
     right: -35%;
-    top: -35%;    
+    top: -35%; 
     border-bottom: 2px solid #000000;
     -moz-transform: rotate(45deg);
     -o-transform: rotate(45deg);
     -webkit-transform: rotate(45deg);    
     transform: rotate(45deg);
 }
+
 .container section article .block.ribbon:after {
     right: -40%;
     top: -40%;    
