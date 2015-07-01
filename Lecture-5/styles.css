@@ -74,6 +74,27 @@ header h1{
     background-color: #ead1db;
     float: left;
     display: table;
+    position: relative;
+    overflow: hidden;
+}
+
+.container section article .block.ribbon:before,
+.container section article .block.ribbon:after {
+    display: block;
+    content: "";        
+    position: absolute;
+    width: 80%;
+    height: 50%;
+    right: -35%;
+    top: -35%;    
+    border-bottom: 2px solid #000000;
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);    
+}
+.container section article .block.ribbon:after {
+    right: -40%;
+    top: -40%;    
 }
 
 .container section article .block div {
