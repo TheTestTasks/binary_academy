@@ -128,7 +128,7 @@ footer p {
     }
 }
 
-@media (max-width: 360px) {
+@media (max-width: 414px) {
     header{
         height: 80px;
         line-height: 1.2;
@@ -151,6 +151,18 @@ footer p {
         text-align: center;
     }    
 
+    nav{    
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 384px) {
+    nav{    
+        padding: 10px 60px;
+    }
+}
+
+@media (max-width: 360px) {
     nav{    
         padding: 10px 50px;
     }
