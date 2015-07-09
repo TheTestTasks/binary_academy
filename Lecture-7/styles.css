@@ -128,7 +128,7 @@ footer p {
     }
 }
 
-@media (max-width: 414px) {
+@media (max-width: 480px) {    
     header{
         height: 80px;
         line-height: 1.2;
@@ -140,8 +140,8 @@ footer p {
         margin: 0 auto;
         font-size: 30pt;
         text-align: center;
-    }
-
+    }    
+    
     header h1{
         display: block;
         float: none;
@@ -150,7 +150,8 @@ footer p {
         line-height: 1.5;        
         text-align: center;
     }    
-
+}
+@media (max-width: 414px) {    
     nav{    
         padding: 10px 20px;
     }
