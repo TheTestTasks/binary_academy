@@ -1,0 +1,169 @@
+body{
+    background: #FFFAFA;
+}
+
+.wrapper {
+    max-width: 960px;
+    margin: 0 auto;
+    position: relative;
+}
+
+header{    
+    height: 100px;
+    line-height: 100px;
+    background: #CDC9C9;
+}
+
+header a.logo{    
+    display: block;    
+    float: left;
+    font-size: 40pt;
+    text-decoration: none;
+    color: #000000;
+    margin-left: 20px;
+}
+
+header h1{
+    float: left;
+    margin: 0 0 0 20px;
+    padding: 0;
+    font-weight: normal;
+}
+
+nav{    
+    padding: 10px 45px;
+    background: #EEE9E9;
+}
+
+nav a{
+    display: inline-block;
+    width: 120px;
+    padding: 3px 5px;
+    margin: 3px 5px;    
+    text-align: center;
+    background: #dddddd;
+}
+
+.container {
+    background: #ffffff;
+}
+
+.container:after {
+    display: block;
+    clear: both;
+    content: "";
+    font-size: 0;
+    height: 0;
+}
+
+.container section {
+    width: 680px;
+    float: left;
+}
+
+.container section article.main {
+    padding: 5px 20px;
+    line-height: 1.5;
+}
+
+.container section article.main p img{
+    float: left;
+    margin: 0 10px 10px 0;
+}
+
+.container aside {
+    padding: 5px 10px 0 0 ;
+    width: 250px;
+    float: right;
+}
+
+footer{
+    background: #8B8989;
+    color: #ffffff;
+}
+
+footer p {    
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    margin: 0;
+    padding: 0;
+}
+
+@media (max-width: 800px) {
+    nav{    
+        padding: 10px 90px;
+    }
+
+    .container section {
+        float: none;
+        width: 100%;
+    }
+
+    .container aside {
+        float: none;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    header h1{
+        font-size: 16pt;
+    }    
+}
+
+@media (max-width: 600px) {
+    nav{    
+        padding: 10px 10px;
+    }
+}
+
+@media (max-width: 568px) {
+    nav{    
+        padding: 10px 30px;
+    }
+
+    nav a{
+        width: 100px;        
+    }
+}
+
+@media (max-width: 360px) {
+    header{
+        height: 80px;
+        line-height: 1.2;
+    }
+
+    header a.logo{        
+        display: block;
+        float: none;
+        margin: 0 auto;
+        font-size: 30pt;
+        text-align: center;
+    }
+
+    header h1{
+        display: block;
+        float: none;
+        margin: 0 auto;
+        font-size: 12pt;
+        line-height: 1.5;        
+        text-align: center;
+    }    
+
+    nav{    
+        padding: 10px 50px;
+    }
+
+    .container section article.main p img{
+        float: none;
+        margin: 0 auto;
+        display: block;
+    }
+}
+
+@media (max-width: 320px) {
+    nav{    
+        padding: 10px 30px;
+    }
+}
