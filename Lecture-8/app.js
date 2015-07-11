@@ -16,7 +16,8 @@ app.controller("ListController", function($scope) {
         $scope.items.push($scope.itemsService.getRandomItem());
     };
 
-    $scope.remove = function(index) {        
+    $scope.remove = function(item) {
+        var index = $scope.items.indexOf(item);
         $scope.items.splice(index, 1);        
     };
 

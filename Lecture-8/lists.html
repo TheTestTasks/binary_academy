@@ -28,12 +28,12 @@
                 <input ng-model="query" type="text" placeholder="Filter">
             </form>
             <div ng-show="visible">
-                <div class="count">Products count: {{ items.length }}</div>
-                <ul ng-repeat="product in items | filter: {name: query}">
+                <div class="count">Products count: {{ filtered.items.length }}</div>
+                <ul ng-repeat="product in filtered.items = (items | filter: {name: query})">
                     <li>
                         <span class="name">{{ product.name }}</span>
                         <span class="price">{{ product.price|currency }}</span>
-                        <span class="delete"><button ng-click="remove($index)">&times;</button></span>
+                        <span class="delete"><button ng-click="remove(product)">&times;</button></span>
                     </li>
                 </ul>
             </div>
@@ -47,13 +47,13 @@
                 <input ng-model="query" type="text" placeholder="Filter">
             </form>
             <div ng-show="visible">
-                <div class="count">Customers count: {{ items.length }}</div>
-                <ul ng-repeat="customer in items | filter:query">
+                <div class="count">Customers count: {{ filtered.items.length }}</div>
+                <ul ng-repeat="customer in filtered.items = (items | filter:query)">
                     <li>
                         <span class="avatar"><img ng-src="{{ customer.avatar }}" alt=""></span>
                         <span class="name">{{ customer.name|formatted }}, {{ customer.age }}</span>
                         <span class="city">{{ customer.city }}</span>
-                        <span class="delete"><button ng-click="remove($index)">&times;</button></span>
+                        <span class="delete"><button ng-click="remove(customer)">&times;</button></span>
                     </li>
                 </ul>
             </div>
