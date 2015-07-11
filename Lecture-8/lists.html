@@ -25,15 +25,14 @@
             <h3>Products <button ng-click="add()">Add</button></h3>
             <div style="float: right;"><button ng-click="toggleVisible()">{{ visibleButtonTitle }} list</button></div>
             <form>
-                <input ng-model="query" type="text" placeholder="Filter">
+                <input ng-model="query" type="search" placeholder="Filter">
             </form>
             <div ng-show="visible">
                 <div class="count">Products count: {{ filtered.items.length }}</div>
                 <ul ng-repeat="product in filtered.items = (items | filter: {name: query})">
                     <li>
                         <span class="name">{{ product.name }}</span>
-                        <span class="price">{{ product.price|currency }}</span>
-                        <span class="delete"><button ng-click="remove(product)">&times;</button></span>
+                        <span class="price">{{ product.price|currency }}</span>                        
                     </li>
                 </ul>
             </div>
@@ -44,7 +43,7 @@
             <h3>Customers <button ng-click="add()">Add</button></h3>
             <div style="float: right;"><button ng-click="toggleVisible()">{{ visibleButtonTitle }} list</button></div>
             <form>
-                <input ng-model="query" type="text" placeholder="Filter">
+                <input ng-model="query" type="search" placeholder="Filter">
             </form>
             <div ng-show="visible">
                 <div class="count">Customers count: {{ filtered.items.length }}</div>
