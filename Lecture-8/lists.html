@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="ListsApp">
+<head>
+    <meta charset="utf-8">
+    <title>Lecture-8</title>
+    <style>
+        div.list {float: left;width: 500px;padding: 0 20px;}
+        div.list:first-child {border-right: 1px dashed #cccccc;}
+        div.list ul {list-style: none;margin: 0;padding: 0;}
+        div.list ul li {margin: 3px 0;padding: 3px;background: #eeeeee;}
+        div.list ul li {height: 40px;line-height: 40px;}
+        div.list ul li span {display: inline-block;margin-left: 20px;}
+        div.list ul li span:first-child {margin-left: 0;}
+        div.list ul li span.avatar {width: 40px;}
+        div.list ul li span.avatar img {vertical-align: middle;}
+        div.list ul li span.name {width: 260px;}
+        div.list ul li span.delete {float: right;}
+        div.list ul li span.delete button {color: red;border: none;background: none;font-size: 16pt;cursor: pointer;}
+        div.count {padding: 5px 0;}
+    </style>
+</head>
+<body>
+    <div class="list" ng-init="type='product';">
+        <div ng-controller="ListController">
+            <h3>Products <button ng-click="add()">Add</button></h3>
+            <div style="float: right;"><button ng-click="toggleVisible()">{{ visibleButtonTitle }} list</button></div>
+            <form>
+                <input ng-model="query" type="text" placeholder="Filter">
+            </form>
+            <div ng-show="visible">
+                <div class="count">Products count: {{ items.length }}</div>
+                <ul ng-repeat="product in items | filter: {name: query}">
+                    <li>
+                        <span class="name">{{ product.name }}</span>
+                        <span class="price">{{ product.price|currency }}</span>
+                        <span class="delete"><button ng-click="remove($index)">&times;</button></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="list" ng-init="type='customer';">
+        <div ng-controller="ListController">
+            <h3>Customers <button ng-click="add()">Add</button></h3>
+            <div style="float: right;"><button ng-click="toggleVisible()">{{ visibleButtonTitle }} list</button></div>
+            <form>
+                <input ng-model="query" type="text" placeholder="Filter">
+            </form>
+            <div ng-show="visible">
+                <div class="count">Customers count: {{ items.length }}</div>
+                <ul ng-repeat="customer in items | filter:query">
+                    <li>
+                        <span class="avatar"><img ng-src="{{ customer.avatar }}" alt=""></span>
+                        <span class="name">{{ customer.name|formatted }}, {{ customer.age }}</span>
+                        <span class="city">{{ customer.city }}</span>
+                        <span class="delete"><button ng-click="remove($index)">&times;</button></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.2/angular.min.js"></script>
+    <script src="app.js"></script>    
+</body>
+</html>
