@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="AlbumsApp">
+<head>
+    <meta charset="utf-8">
+    <title>Lecture-9</title>
+    <style>        
+        div.list{width: 600px;margin: 0 auto;font-family: Arial;}
+        ul {list-style: none;margin: 0;padding: 0;}
+        ul li {margin: 3px 0;padding: 3px;background: #eeeeee;cursor: pointer;}
+        ul li:hover {background: #dddddd;}
+        ul li {height: 64px;line-height: 64px;}
+        ul li span{display: inline-block;}
+        ul li span img {vertical-align: middle;}
+        ul li span.name {margin-left: 20px;}
+        div.overlay {background: rgba(0,0,0,0.7);position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: 10;display: table;}
+        div.overlay div {display: table-cell;text-align: center;vertical-align: middle;}
+        div.overlay h2 {margin: 5px 0;color: #ffffff;}
+        div.overlay div img {max-height: 90%;}
+    </style>
+</head>
+<body>
+    <div class="list" ng-controller="ListController">
+        <h1>Albums</h1>
+        <ul ng-repeat="album in albums">
+            <li ng-cover-overlay>
+                <span class="cover"><img ng-src="{{ album.thumb }}" alt="{{ album.name }}"></span>
+                <span class="name">{{ album.name }}</span>                
+            </li>
+        </ul>
+    </div>    
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.2/angular.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.2/angular-resource.min.js"></script>
+    <script src="app.js"></script>
+    <script src="listController.js"></script>
+    <script src="httpProvider.js"></script>
+    <script src="resourceProvider.js"></script>
+    <script src="ngCoverOverlay.js"></script>
+</body>
+</html>
