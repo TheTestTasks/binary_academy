@@ -5,8 +5,8 @@
         .service('ResourceProvider', ResourceProvider);
 
     function ResourceProvider($resource) {
-        this.getAlbums = function($scope) {
-            $scope.albums = $resource($scope.API_URL).query();
+        this.getAlbums = function(lsit, apiUrl) {
+            lsit.setAlbums($resource(apiUrl).query());
         };
     }
     

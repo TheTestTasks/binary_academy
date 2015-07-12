@@ -5,9 +5,9 @@
         .service('HttpProvider', HttpProvider);
 
     function HttpProvider($http) {
-        this.getAlbums = function($scope) {
-            $http.get($scope.API_URL).then(function(data, status, headers, config) {
-                $scope.albums = data.data;
+        this.getAlbums = function(lsit, apiUrl) {
+            $http.get(apiUrl).then(function(data, status, headers, config) {
+                lsit.setAlbums(data.data);
             }); 
         };
     }

@@ -19,9 +19,9 @@
     </style>
 </head>
 <body>
-    <div class="list" ng-controller="ListController">
+    <div class="list" ng-controller="ListController as list">
         <h1>Albums</h1>
-        <ul ng-repeat="album in albums">
+        <ul ng-repeat="album in list.albums">
             <li ng-cover-overlay>
                 <span class="cover"><img ng-src="{{ album.thumb }}" alt="{{ album.name }}"></span>
                 <span class="name">{{ album.name }}</span>                
