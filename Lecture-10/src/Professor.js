@@ -1,6 +1,7 @@
 // Professor
-var Professor = function(name, age) {    
+var Professor = function(name, age, science) {    
     Man.call(this, name, age);
+    this.science = science;
 };
 
 Professor.prototype = new Man();
