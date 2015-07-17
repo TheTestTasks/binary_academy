@@ -1,0 +1,10 @@
+{
+	"name": "Lecture-11",
+  	"version": "1.0.0",
+  	"description": "REST API Implementation on Express.js",
+  	"author": "brevis <brevis.ua@gmail.com>",
+	"dependencies": {
+    	"express": "*",
+    	"body-parser": "*"
+  }
+}

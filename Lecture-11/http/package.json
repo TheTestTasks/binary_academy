@@ -1,0 +1,11 @@
+{
+	"name": "Lecture-11",
+  	"version": "1.0.0",
+  	"description": "REST API Implementation",
+  	"author": "brevis <brevis.ua@gmail.com>",
+	"dependencies": {
+    	"router": "*",
+    	"finalhandler": "*",
+    	"body-parser": "*"
+  }
+}
