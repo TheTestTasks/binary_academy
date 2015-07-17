@@ -17,7 +17,6 @@
   │Добавить страну          │     POST     │User-Agent: Internet-Explorer 9.0              │
   │                         │              │                                               │
   │                         │              │Name={name}                                    │
-  │                         │              │&Description={description}                     │
   ├─────────────────────────┼──────────────┼───────────────────────────────────────────────┤
   │                         │              │POST /country/:country/hotel HTTP/1.1          │
   │                         │              │Host: 127.0.0.1:8000                           │
