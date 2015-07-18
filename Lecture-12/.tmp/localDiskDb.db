@@ -1,0 +1,122 @@
+{
+  "data": {
+    "country": [
+      {
+        "Name": "China",
+        "createdAt": "2015-07-18T08:11:49.863Z",
+        "updatedAt": "2015-07-18T08:11:49.863Z",
+        "id": 1
+      },
+      {
+        "Name": "India",
+        "createdAt": "2015-07-18T08:12:32.129Z",
+        "updatedAt": "2015-07-18T08:12:32.129Z",
+        "id": 2
+      },
+      {
+        "Name": "Russia",
+        "createdAt": "2015-07-18T08:12:37.186Z",
+        "updatedAt": "2015-07-18T08:12:37.186Z",
+        "id": 3
+      },
+      {
+        "Name": "Ukraine",
+        "createdAt": "2015-07-18T08:12:43.734Z",
+        "updatedAt": "2015-07-18T08:12:43.734Z",
+        "id": 4
+      }
+    ],
+    "hotel": [
+      {
+        "Country": "China",
+        "Name": "Holiday Inn Downtown Beijing",
+        "Description": "4-star hotel, Address: 98 Beilishi Rd, Xicheng, Beijing, China",
+        "createdAt": "2015-07-18T08:30:04.558Z",
+        "updatedAt": "2015-07-18T08:30:04.558Z",
+        "id": 3
+      },
+      {
+        "Country": "India",
+        "Name": "Hotel India",
+        "Description": "3-star hotel, Address: No.59,Patel Nagar, Cantt,Bhagwanpur, Varanasi, Uttar Pradesh 221002, India",
+        "createdAt": "2015-07-18T08:30:47.971Z",
+        "updatedAt": "2015-07-18T08:30:47.971Z",
+        "id": 4
+      },
+      {
+        "Country": "Russia",
+        "Name": "Renaissance St. Petersburg Baltic Hotel",
+        "Description": "5-star hotel, Address: Pochtamtskaya Str. 4, St. Petersburg, Russia, 190000",
+        "createdAt": "2015-07-18T08:31:26.740Z",
+        "updatedAt": "2015-07-18T08:31:26.740Z",
+        "id": 5
+      },
+      {
+        "Country": "Ukraine",
+        "Name": "Hotel Ukraine",
+        "Description": "3-star hotel, Address: 4 Institutskaya Street, Kyiv",
+        "createdAt": "2015-07-18T08:31:59.187Z",
+        "updatedAt": "2015-07-18T08:31:59.187Z",
+        "id": 6
+      },
+      {
+        "Country": "Ukraine",
+        "Name": "Kiev Inn",
+        "Description": "3-star hotel, Address: Mykhailivs'ka St, 9, Kyiv",
+        "createdAt": "2015-07-18T08:32:22.149Z",
+        "updatedAt": "2015-07-18T08:32:22.149Z",
+        "id": 7
+      }
+    ]
+  },
+  "schema": {
+    "country": {
+      "Name": {
+        "type": "string"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "hotel": {
+      "Country": {
+        "type": "string"
+      },
+      "Name": {
+        "type": "string"
+      },
+      "Description": {
+        "type": "string"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    }
+  },
+  "counters": {
+    "country": {
+      "id": 4
+    },
+    "hotel": {
+      "id": 8
+    }
+  }
+}
