@@ -1,0 +1,11 @@
+{
+    "name": "Lecture-113",
+    "version": "1.0.0",
+    "description": "WebSocket chat on Express.js",
+    "author": "brevis <brevis.ua@gmail.com>",
+    "dependencies": {
+        "express": "*",
+        "body-parser": "*",
+        "socket.io": "*"
+    }
+}
